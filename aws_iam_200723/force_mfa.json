@@ -39,7 +39,7 @@
                 "iam:UpdateSSHPublicKey",
                 "iam:UploadSSHPublicKey"
             ],
-            "Resource": "arn:aws:iam::YOUR-ACCOUNT-ID:user/${aws:username}",
+            "Resource": "arn:aws:iam::820684333201:user/${aws:username}",
             "Effect": "Allow",
             "Sid": "AllowIndividualUserToSeeAndManageTheirOwnAccountInformation"
         },
@@ -49,8 +49,8 @@
                 "iam:ListMFADevices"
             ],
             "Resource": [
-                "arn:aws:iam::YOUR-ACCOUNT-ID:mfa/*",
-                "arn:aws:iam::YOUR-ACCOUNT-ID:user/${aws:username}"
+                "arn:aws:iam::820684333201:mfa/*",
+                "arn:aws:iam::820684333201:user/${aws:username}"
             ],
             "Effect": "Allow",
             "Sid": "AllowIndividualUserToListTheirOwnMFA"
@@ -60,14 +60,12 @@
                 "iam:CreateVirtualMFADevice",
                 "iam:DeactivateMFADevice",
                 "iam:DeleteVirtualMFADevice",
-                "iam:RequestSmsMfaRegistration",
-                "iam:FinalizeSmsMfaRegistration",
                 "iam:EnableMFADevice",
                 "iam:ResyncMFADevice"
             ],
             "Resource": [
-                "arn:aws:iam::YOUR-ACCOUNT-ID:mfa/${aws:username}",
-                "arn:aws:iam::YOUR-ACCOUNT-ID:user/${aws:username}"
+                "arn:aws:iam::820684333201:mfa/${aws:username}",
+                "arn:aws:iam::820684333201:user/${aws:username}"
             ],
             "Effect": "Allow",
             "Sid": "AllowIndividualUserToManageTheirOwnMFA"
@@ -86,7 +84,6 @@
                 "codecommit:*",
                 "kms:Encrypt",
                 "kms:Decrypt",
-                "kms:ReEncrypt",
                 "kms:GenerateDataKey",
                 "kms:GenerateDataKeyWithoutPlaintext",
                 "kms:DescribeKey"
