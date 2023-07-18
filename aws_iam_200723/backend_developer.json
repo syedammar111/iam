@@ -97,6 +97,17 @@
       ],
       "Effect": "Deny",
       "Resource": "*"
+    },
+    {
+      "Sid": "allow",
+      "Action": "*",
+      "Effect": "Allow",
+      "Resource": "*",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": "192.0.2.0/24"
+        }
+      }
     }
   ]
 }
